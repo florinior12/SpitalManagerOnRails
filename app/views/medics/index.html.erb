@@ -1,0 +1,21 @@
+<% provide(:title, 'Medici') %>
+<h1>Medici</h1>
+<div class = "row">
+  <%=link_to "Adauga medic", new_medic_path, :class=>"btn btn-default" %>
+</div>
+<div class="row">
+  <%= will_paginate @medici %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nume</th>
+        <th>Prenume</th>
+        <th>Sectie</th>
+      </tr>
+    </thead>
+    <tbody><%= render @medici %></tbody>
+    
+  </table>
+  <%= will_paginate @medici %>
+</div>
+

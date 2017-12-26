@@ -1,0 +1,9 @@
+<tr>
+  <td> <%= Medic.find(consult.medic_id).nume + ' ' + Medic.find(consult.medic_id).prenume%> </td>
+  <td> <%= Pacient.find(consult.pacient_id).nume + ' ' + Pacient.find(consult.pacient_id).prenume %> </td>
+  <td> <%= consult.diagnostic  %> </td>
+  <td> <%= consult.data  %> </td>
+ <td><%= link_to 'Modifica ', edit_consult_path(consult)%></td>
+  <td> <%= link_to "Sterge", consult, method: :delete, data: { confirm: "Stergeti consultatia: " + consult.medic_id.to_s + ' ' + consult.pacient_id.to_s + "?" } %></td>
+
+</tr>

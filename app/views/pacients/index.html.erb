@@ -1,0 +1,22 @@
+<% provide(:title, 'Pacienti') %>
+<h1>Pacienti</h1>
+<div class = "row">
+  <%=link_to "Adauga pacient", new_pacient_path, :class=>"btn btn-default" %>
+</div>
+<div class="row">
+  <%= will_paginate @pacienti %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nume</th>
+        <th>Prenume</th>
+        <th>Varsta</th>
+        <th>Adresa</th>
+      </tr>
+    </thead>
+    <tbody><%= render @pacienti %></tbody>
+    
+  </table>
+  <%= will_paginate @pacienti %>
+</div>
+

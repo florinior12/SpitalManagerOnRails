@@ -1,0 +1,23 @@
+<% provide(:title, "Modifica medic") %>
+<h1>Modifica medic</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@medic) do |f| %>
+      
+
+      <%= f.label :nume %>
+      <%= f.text_field :nume %>
+
+      <%= f.label :prenume %>
+      <%= f.text_field :prenume %>
+      
+      <%= f.label :sectie %>
+      <%= f.text_field :sectie %>
+
+      <%= f.submit "Salveaza modificari", class: "btn btn-primary" %>
+    <% end %>
+
+    
+  </div>
+</div>

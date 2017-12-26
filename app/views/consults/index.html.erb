@@ -1,0 +1,22 @@
+<% provide(:title, 'Consultatii') %>
+<h1>Consultatii</h1>
+<div class = "row">
+  <%=link_to "Adauga consultatie", new_consult_path, :class=>"btn btn-default" %>
+</div>
+<div class="row">
+  <%= will_paginate @consultaties %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Medic</th>
+        <th>Pacient</th>
+        <th>Diagnostic</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody><%= render @consults %></tbody>
+    
+  </table>
+  <%= will_paginate @consults %>
+</div>
+

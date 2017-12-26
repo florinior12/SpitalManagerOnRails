@@ -1,0 +1,22 @@
+<% provide(:title, 'Adauga pacient') %>
+<h1>Adauga pacient</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@pacient) do |f| %>
+      <%= f.label :nume %>
+      <%= f.text_field :nume %>
+
+      <%= f.label :prenume %>
+      <%= f.text_field :prenume %>
+
+      <%= f.label :varsta %>
+      <%= f.number_field :varsta %>
+
+      <%= f.label :adresa %>
+      <%= f.text_field :adresa %>
+
+      <%= f.submit "Adauga", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

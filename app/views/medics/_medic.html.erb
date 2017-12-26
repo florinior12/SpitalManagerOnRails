@@ -1,0 +1,9 @@
+<tr>
+  <td> <%= medic.nume %> </td>
+  <td> <%= medic.prenume %> </td>
+  <td> <%= medic.sectie %> </td>
+
+  <td><%= link_to 'Modifica ', edit_medic_path(medic)%></td> 
+  <td> <%= link_to "Sterge", medic, method: :delete, data: { confirm: "Stergeti medicul: " + medic.nume + ' ' + medic.prenume + "?" } %></td>
+
+</tr>
