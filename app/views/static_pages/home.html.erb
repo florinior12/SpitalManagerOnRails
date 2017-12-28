@@ -1,15 +1,29 @@
 <% provide(:title, "Home") %>
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1>Baza de date a unui spital</h1>
 
   <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    Proiect pentru materia 'Programarea aplicativă a interfeţelor'
   </h2>
 
   
 </div>
+<h2 id="content">
+  Proiectul este bazat pe cartea <i>Ruby on Rails Tutorial (Rails 5) - Learn Web Development with Rails </i><sup>[1]</sup>, a lui Michael Hartl. <br>
+  Cu ajutorul ei am reuşit să învăţ Rails la un nivel la care să pot adapta conţinutul tutorialului la tema proiectului.
+  </h2>
+  <h2 id="content">
+  Pentru a afla cum pot modela o bază de date de tip many to many am folosit documentaţia oficială Rails <sup>[2]</sup>, iar pentru
+  ştergere în cascadă, precum şi alte probleme întâlnite, StackOverflow <sup>[3]</sup>.
+</h2>
 
+<h2>
+  Linkuri:
+  <ul>
+    <li>[1].<a href="https://www.railstutorial.org/book/">https://www.railstutorial.org/book/</a></li>
+    <li>[2].<a href="http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association">http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association</a></li>
+    <li>[3].<a href="https://stackoverflow.com/questions/331394/can-i-set-up-cascade-deleting-in-rails">https://stackoverflow.com/questions/331394/can-i-set-up-cascade-deleting-in-rails</a></li>
+  </ul>
+</h2>
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
             'http://rubyonrails.org/' %>

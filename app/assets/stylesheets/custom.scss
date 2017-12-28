@@ -49,6 +49,16 @@ h2 {
   color: #777;
 }
 
+h2#content {
+  
+  font-size: 1.2em;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #333;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -89,6 +99,11 @@ footer a:hover {
 
 footer small {
   float: left;
+}
+
+footer div#right {
+  float: right;
+  list-style: none;
 }
 
 footer ul {
