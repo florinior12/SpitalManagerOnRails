@@ -6,24 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# 50.times do 
-#   nume = Faker::Name.first_name
-#   prenume = Faker::Name.last_name
-#   varsta = (18..75).to_a.sample
-#   adresa = Faker::Address.street_address
-#   Pacient.create!(nume: nume, prenume: prenume, varsta: varsta, adresa: adresa)
-# end
+100.times do 
+  nume = Faker::Name.first_name
+  prenume = Faker::Name.last_name
+  varsta = (18..75).to_a.sample
+  adresa = Faker::Address.street_address
+  telefon = Faker::PhoneNumber.cell_phone
+  email = nume.downcase + [".", "-", "_"].sample + prenume.downcase + "@somemail.com"
+  Pacient.create!(nume: nume, prenume: prenume, varsta: varsta, adresa: adresa, telefon: telefon, email: email)
+end
 
-# 50.times do 
-#   nume = Faker::Name.first_name
-#   prenume = Faker::Name.last_name
-#   sectie = Medic.sectii.sample
-#   Medic.create!(nume: nume, prenume: prenume, sectie: sectie)
-# end
+40.times do 
+  nume = Faker::Name.first_name
+  prenume = Faker::Name.last_name
+  sectie = Medic.sectii.sample
+  telefon = Faker::PhoneNumber.cell_phone
+  email = nume.downcase + [".", "-", "_"].sample + prenume.downcase + "@somemail.com"
+  Medic.create!(nume: nume, prenume: prenume, sectie: sectie, telefon: telefon, email: email)
+end
 
 book = Spreadsheet.open 'db/999cod.xls'
 sheet = book.worksheet 0
-100.times do 
+200.times do 
     id_medic = Medic.all.sample.id
     id_pacient = Pacient.all.sample.id
     diagnostic = sheet.cell((1..999).to_a.sample,1)
