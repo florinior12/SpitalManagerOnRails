@@ -3,7 +3,7 @@
   <td> <%= link_to Pacient.find(consult.pacient_id).nume + ' ' + Pacient.find(consult.pacient_id).prenume, Pacient.find(consult.pacient_id) %> </td>
   <td> <%= consult.diagnostic  %> </td>
   <td> <%= consult.data  %> </td>
- <td><%= link_to 'Modifica ', edit_consult_path(consult)%></td>
-  <td> <%= link_to "Sterge", consult, method: :delete, data: { confirm: "Stergeti consultatia: " + consult.medic_id.to_s + ' ' + consult.pacient_id.to_s + "?" } %></td>
+ <td><%= link_to 'Modifică ', edit_consult_path(consult)%></td>
+  <td> <%= link_to "Şterge", consult, method: :delete, data: { confirm: "Ştergeţi consultaţia: " + consult.medic_id.to_s + ' ' + consult.pacient_id.to_s + "?" } %></td>
 
 </tr>

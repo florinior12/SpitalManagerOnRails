@@ -5,8 +5,8 @@
   <td> <%= medic.telefon %> </td>
   <td> <%= medic.email %> </td>
   <td> <%= medic.consults.length %></td>
-  <td><%= link_to 'Vezi Consultatii', medic%></td>
-  <td><%= link_to 'Modifica ', edit_medic_path(medic)%></td> 
-  <td> <%= link_to "Sterge", medic, method: :delete, data: { confirm: "Stergeti medicul: " + medic.nume + ' ' + medic.prenume + "?" } %></td>
+  <td><%= link_to 'Vezi Consultaţii', medic%></td>
+  <td><%= link_to 'Modifică ', edit_medic_path(medic)%></td> 
+  <td> <%= link_to "Şterge", medic, method: :delete, data: { confirm: "Ştergeţi medicul: " + medic.nume + ' ' + medic.prenume + "?" } %></td>
 
 </tr>
