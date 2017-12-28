@@ -3,6 +3,8 @@
   <td> <%= pacient.prenume %> </td>
   <td> <%= pacient.varsta %> </td>
   <td> <%= pacient.adresa %> </td>
+  <td> <%= pacient.consults.length %></td>
+  <td><%= link_to 'Vezi Consultatii', pacient%></td>
   <td><%= link_to 'Modifica ', edit_pacient_path(pacient)%></td> 
   <td> <%= link_to "Sterge", pacient, method: :delete, data: { confirm: "Stergeti pacientul: " + pacient.nume + ' ' + pacient.prenume + "?" } %></td>
 

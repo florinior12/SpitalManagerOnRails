@@ -1,6 +1,7 @@
 class MedicsController < ApplicationController
   def show
     @medic = Medic.find(params[:id])
+    @consultatii = Consult.where(medic_id: params[:id])
   end
 
   def new

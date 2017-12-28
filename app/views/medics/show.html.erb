@@ -1,1 +1,27 @@
-<%= @medic.nume %>, <%= @medic.prenume %>
+
+<h3><%=@medic.nume %> <%= @medic.prenume %> - Consultatii</h3>
+<div class="row">
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Pacient</th>
+        <th>Diagnostic</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <% @consultatii.each do |co|%>
+          <tr>
+          <td> <%= Pacient.find(co.pacient_id).nume + ' ' + Pacient.find(co.pacient_id).prenume %> </td>
+          <td> <%= co.diagnostic  %> </td>
+          <td> <%= co.data  %> </td>
+          </tr>
+        <% end %>
+      
+    </tbody>
+    
+  </table>
+ 
+</div>
