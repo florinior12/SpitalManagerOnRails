@@ -1,6 +1,6 @@
 <tr>
-  <td> <%= Medic.find(consult.medic_id).nume + ' ' + Medic.find(consult.medic_id).prenume%> </td>
-  <td> <%= Pacient.find(consult.pacient_id).nume + ' ' + Pacient.find(consult.pacient_id).prenume %> </td>
+  <td> <%= link_to Medic.find(consult.medic_id).nume + ' ' + Medic.find(consult.medic_id).prenume, Medic.find(consult.medic_id) %> </td>
+  <td> <%= link_to Pacient.find(consult.pacient_id).nume + ' ' + Pacient.find(consult.pacient_id).prenume, Pacient.find(consult.pacient_id) %> </td>
   <td> <%= consult.diagnostic  %> </td>
   <td> <%= consult.data  %> </td>
  <td><%= link_to 'Modifica ', edit_consult_path(consult)%></td>
